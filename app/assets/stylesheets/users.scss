@@ -1,0 +1,54 @@
+body.user
+{
+    background-color:rgb(202, 197, 197);
+}
+body.userform{
+    background-color:rgb(155, 107, 156);
+}
+.author-details{
+    text-align:center ;
+}
+.author-form{
+    border: 5px solid white;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color:white;
+    border-radius: 20px;
+    padding: 10px 10px 50px 10px;
+}
+.form-user{
+    border: 5px solid white;
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 20px;
+    background-color:white;
+    border-radius: 20px;
+    padding: 0px 100px 50px 100px;
+}
+.edit-user{
+    text-align: center;
+}
+.user-label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.user-field{
+    width:100%;
+    padding: 10px 0px 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    border-radius: 5px;
+    color:grey;
+    border:2px solid rgb(187, 186, 186) !important;
+}
+.user-show{
+    background-color: rgb(148, 148, 184);
+    margin-top: 30px;
+    width: 40%;
+    margin-left: 250px;
+    border-radius: 10px;
+    padding: 30px 0px 30px 50px;
+}

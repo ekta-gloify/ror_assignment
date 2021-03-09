@@ -1,0 +1,41 @@
+<h1 style="text-align: center">Welcome to Author!!!</h1>
+
+<% if @books.size > 0 %>
+  <table>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-top:20px;
+        text-align:center;
+        margin-left: 300px;
+      }
+      td, th {
+        font-size: 18px;
+        border: 1px solid black;
+        padding:20px 40px 20px 60px;
+        
+      }
+      th{
+        background-color: rgb(183, 191, 199);
+      }
+      
+    </style>
+    <thead>
+      <tr>
+        <th>Book Title</th>
+        <th>Book Publication Date</th>
+        <th>Assigned Library Name</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% @books.each do |book| %>
+        <tr>
+          <td><%= book.title %></td>
+          <td><%= book.published_at %></td>
+          <td><%= book.library&.l_name %></td>
+          </tr>  
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

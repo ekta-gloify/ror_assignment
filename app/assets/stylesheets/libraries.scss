@@ -1,0 +1,73 @@
+// Place all the styles related to the Libraries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body.library{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(177, 110, 63);
+}
+.main-lib-heading{
+    margin-left: 500px;
+}
+.add-new-lib{
+    margin-left: 500px;
+    color:black;
+    text-decoration:none; 
+    border:1px;
+    background-color:rgb(13, 20, 13); 
+    color:white;
+    padding:10px 20px 10px 20px;
+    font-size: 25px;
+    border-radius: 25px;
+}
+.add-edit-css{
+    margin-left: 110px;
+    border-radius: 5px;
+
+}
+.lib-edit-css{
+    border: 5px solid white;
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 30px;
+    background-color:white;
+    border-radius: 20px;
+    padding: 20px 100px 10px 100px;
+}
+.lib-label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.lib-text{
+    width:100%;
+    padding: 10px 0px 10px 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color:grey;
+    border:2px solid rgb(187, 186, 186) !important;
+}
+.submit-lib{
+    margin-left: 60px;
+   margin-top: 20px;
+   border-radius: 5px;
+   padding: 10px 120px 10px 120px;
+   font-size: 20px;
+   font-weight: bold;
+   background-color: royalblue;
+   border: none;
+   color: white;
+   cursor: pointer;
+}
+.submit-css{
+    text-align: center;
+}
+.show-form{
+    background-color: rgb(148, 148, 184);
+    margin-top: 30px;
+    width: 70%;
+    margin-left: 200px;
+    border-radius: 10px;
+    padding: 30px 0px 30px 50px;
+}

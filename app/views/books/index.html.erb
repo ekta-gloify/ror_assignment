@@ -1,0 +1,49 @@
+
+
+<h1 class="main-book-heading">Book Details</h1>
+
+<table>
+    <style>
+        table {
+          border-collapse: collapse;
+          margin-top:20px;
+          text-align:center;
+          margin-left: 10px;
+        }
+        td, th {
+          font-size: 18px;
+          border: 1px solid black;
+          padding:20px 40px 20px 60px;
+          
+        }
+        th{
+          background-color: rgb(183, 191, 199);
+        }
+        
+      </style>
+  <thead>
+    <tr>
+      <th>Title of Book</th>
+      <th>Published At</th>
+      <th>Book Language</th>
+      <th>Author Name</th>
+      <th colspan="3">Show/Edit/Destroy Books</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.published_at %></td>
+        <td><%= book.language %></td>
+        <td><%= book.user.a_name %></td>
+        <td><%= link_to 'Show', book,style:  "text-decoration:none; border:1px; background-color:green; padding:8px; color:white" %></td>
+        <td><%= link_to 'Edit', edit_book_path(book),style:  "text-decoration:none; border:1px; background-color:royalblue; padding:8px; color:white" %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure delete this book?'},style:"text-decoration:none; border:1px; background-color:red; padding:8px; color:white" %></td>
+      </tr>  
+    <% end %>
+  </tbody>
+</table>
+<br/><br/>
+<%= link_to "Add New Book", new_book_path , :class=>"add-new-book"%>

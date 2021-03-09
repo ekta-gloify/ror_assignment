@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<div class="show-book">
+  <div>
+    <h1>Title of Book :</h1>
+    <h3><%= @book.title %></h3>
+
+    <h1>Book Publication Date:</h1>
+    <h3><%= @book.published_at %></h3>
+
+    <h1>Book Language :</h1>
+    <h3><%= @book.language %></h3>
+
+    <h1>Author Name :</h1>
+    <h3><%= @book.user.a_name %></h3>
+    
+  </div>
+</div>

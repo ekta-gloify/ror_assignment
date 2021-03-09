@@ -1,0 +1,77 @@
+
+<div class="show-form">
+  <h2 style="color:white">Library Name :</h2>
+  <h3><%= @library.l_name %></h3> 
+
+  <h2 style="color:white">Opening Time :</h2>
+  <h3><%= @library.opening_time%></h3>
+
+  <h2 style="color:white">Closing Time :<h2>
+  <h3><%= @library.closing_time%></h3>
+
+  <h2 style="color:white">Number of books :</h2>
+  <h3><%= @books.size%></h3>
+
+ 
+<% if @unassigned_books.size > 0 %>
+  
+  <h2 style="color:white">Books Assign :</h2>
+  <%= select("book","id",@unassigned_books.map {|i| [ i.title, i.id ] }, {prompt: 'Select Book'}) %> <button onClick="assignedBook(<%=@library.id%>,document.getElementById('book_id').value);">Assign Book</button>
+
+<% end %>
+
+<!-- book-table -->
+<% if @books.size>0 %>
+  <table>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-top:20px;
+        text-align:center;
+        margin-left: 10px;
+      }
+      td, th {
+        border: 1px solid black;
+        padding:10px 40px 10px 40px; 
+    }
+    </style>
+    <thead>
+      <tr>
+        <th><h2 style="color:white">Book Title</h2></th>
+        <th><h2 style="color:white">Author Name</h2></th>
+        <th><h2 style="color:white">Publication Date</h2></th>
+        <th><h2 style="color:white">Book Unassign</h2></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books.each do |book| %>
+      <tr>
+        <td><h3><%= book.title %></h3></td>
+        <td><h3><%= book.user.a_name%></h3></td>
+        <td><h3><%= book.published_at %></h3></td>
+        <td><%= link_to '<button type="button">Unassign Book</button>'.html_safe, {:controller => "books", :action => "unassigned_book" ,:book_id => book.id, :library_id=> @library.id} ,:method=>:post %></td>   
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+  
+</div>
+
+<script type="text/javascript">
+  function assignedBook(library_id, book_id) {
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/admin/libraries/"+library_id+"/assigned_book",
+      // dataType: "json",
+      data: {book_id: book_id},
+      success(data) {
+              window.location.reload();
+            },
+            error(data) {
+              console.error(data);
+            }
+          });
+          console.log(library_id, book_id);
+  }
+</script>

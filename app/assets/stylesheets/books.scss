@@ -1,0 +1,63 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body.bookform{
+    background-color: rgb(6, 170, 170);
+}
+.main-book-heading{
+    margin-left: 560px;  
+}
+.new-book,
+.edit-book{
+    text-align: center;
+}
+.add-new-book{
+    margin-left: 570px;
+    color:black;
+    text-decoration:none; 
+    border:1px;
+    background-color:rgb(13, 20, 13); 
+    color:white;
+    padding:8px ;
+    font-size: 20px;
+}
+.form-book{
+    border: 5px solid white;
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 20px;
+    background-color:white;
+    border-radius: 20px;
+    padding: 0px 100px 50px 100px;
+
+}
+.label-book{
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+.field-book{
+        width:100%;
+        padding: 10px 0px 10px 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        color:grey;
+        border:2px solid rgb(187, 186, 186) !important;
+    } 
+.create-edit-book{
+    text-align: center;
+}
+.btn-book{
+    padding: 30px;
+}
+.show-book{
+    background-color: rgb(148, 148, 184);
+    margin-top: 30px;
+    width: 40%;
+    margin-left: 200px;
+    border-radius: 10px;
+    padding: 30px 0px 30px 50px;
+}

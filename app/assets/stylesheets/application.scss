@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+
+ body{
+     margin: 0;
+     padding: 0;
+     
+ }
+ #user_nav{
+     text-align: center;
+    margin-top: 40px;
+    margin-left: 1000px;
+ }
+ .sign-up-button
+ {
+    text-decoration:none;
+    border:1px;
+    background-color:rgb(214, 233, 108); 
+    color:rgb(90, 88, 88); 
+    padding:10px 25px 10px 25px; 
+    margin:25px;
+    font-size: 22px;
+    border-radius: 5px;
+ }
+ .sign-in-button{
+     text-decoration: none;
+     border: 1px;
+     background-color:rgb(214, 233, 108);
+     color:rgb(90, 88, 88); 
+    padding:10px 25px 10px 25px; 
+    margin:25px;
+    font-size: 22px;
+    border-radius: 5px;
+ }
+
+ .main-heading{
+    color:white;
+    margin-left: 300px;
+    margin-top: 200px;
+    font-size: 50px;
+}
+.edit-user-login{
+    text-decoration: none;
+    border: 1px solid rgb(231, 230, 230);
+    background: rgb(231, 230, 230);
+    padding: 8px;
+    color:black;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.log-out-btn{
+    text-decoration: none;
+    border: 1px solid rgb(131, 165, 226);
+    background: rgb(131, 165, 226);
+    padding: 8px;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.alert-info{
+    color: forestgreen;
+    border: 1px solid forestgreen;
+    width:15%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgb(124, 192, 124);
+    margin-left: 1200px;
+}

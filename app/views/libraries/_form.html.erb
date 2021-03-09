@@ -1,0 +1,19 @@
+<body class="library"></body>
+
+<%= form_with model: library do |form| %>
+  <div>
+    <%= form.label :Library_Name ,:class=>"lib-label"%> <br/>
+    <%= form.text_field :l_name ,placeholder: "Enter Library Name",:class=>"lib-text"%><br><br>
+
+    <%= form.label :opening_time,:class=>"lib-label" %> <br/>
+    <%= form.text_field :opening_time,placeholder: "Enter Opening-time" ,:class=>"lib-text"%><br><br>
+
+    <%= form.label :closing_time,:class=>"lib-label" %>  <br/>
+    <%= form.text_field :closing_time,placeholder: "Enter Closing-time" ,:class=>"lib-text"%>
+  </div>
+  <br/>
+
+  <div class="submit-css">
+    <%= form.submit%>
+  </div>
+<% end %>

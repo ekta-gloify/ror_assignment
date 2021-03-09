@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library-App</title>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+  </head>
+
+  <body>
+    <%if notice%><div class="alert-info"><%=notice%></div><%end%>
+    <%if notice%><div class="alert-warning"><%=alert%></div><%end%>
+
+    <div id= "user_nav">
+
+      <% if user_signed_in? %>
+    
+         <%= link_to current_user.email, edit_user_registration_path, :class=>"edit-user-login" %>
+         <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=> "log-out-btn" %>
+    
+       <% else %>
+    
+         <%= link_to "Sign up", new_user_registration_path, :class=>"sign-in-button" %> 
+         <%= link_to "Sign in", new_user_session_path,  :class=>"sign-up-button" %>
+    
+       <% end %>
+    
+    </div>
+     
+    <%= yield %>
+  </body>
+</html>

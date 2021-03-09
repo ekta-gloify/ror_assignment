@@ -1,0 +1,24 @@
+<body class="userform"></body>
+<div class="form-user">
+  <h1 class="edit-user">Edit User</h1>
+    <%= form_with model: user do |form| %>
+    
+      <div>
+        <%= form.label :Email ,:class=>"user-label"%> <br/>
+        <%= form.text_field :email ,placeholder: "Enter Email",:class=>"user-field"%><br><br>
+
+        <%= form.label :A_Name,:class=>"user-label" %> <br/>
+        <%= form.text_field :a_name,placeholder: "Enter Auhtor Name" ,:class=>"user-field"%><br><br>
+
+        <%= form.label :Date_Of_Birth,:class=>"user-label" %>  <br/>
+        <%= form.text_field :date_of_birth,placeholder: "Enter Date-of-birth",:class=>"user-field"%>
+      </div>
+        <br/>
+
+      <div class="submit-css">
+        <%= form.submit%>
+      </div>
+
+    <% end %>
+
+</div>

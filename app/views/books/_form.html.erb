@@ -1,0 +1,22 @@
+<body class="bookform"></body>
+
+<%= form_for @book do |f| %>
+    <div>
+        <%= f.label :"Book Title", :class=>"label-book" %>
+        <%= f.text_field :title , :class=>"field-book" %><br/>
+
+        <%= f.label :published_at, :class=>"label-book" %>
+        <%= f.date_field :published_at ,:class=>"field-book"%><br/>
+
+        <%= f.label :language, :class=>"label-book" %>
+        <%= f.text_field :language, :class=>"field-book" %><br/>
+
+        <%= f.label :"Author name", :class=>"label-book" %><br/><br/>
+        <%= f.select :user_id, 
+        options_from_collection_for_select(@authors, :id, :a_name), :prompt => "Select Author", :class=>"dropdown-book" %>
+    <br/><br/>
+    <div class="create-edit-book"">
+        <%= f.submit%></div>
+</div>
+<% end %>  
+
